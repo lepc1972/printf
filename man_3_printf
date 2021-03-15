@@ -1,0 +1,61 @@
+.\" Manpage for the _printf() project.
+.\"
+.TH man 1 "14-03-2021" "1.0" "_Printf Project man page"
+.SH NAME
+._Printf
+\- With this function, we can produce an output according the given format.
+.SH SYNOPSIS
+#include "holberton.h"
+
+int _printf(const char *format, ...)
+
+_printf[argument]...
+
+.SH DESCRIPTION
+With this function we can print strings, characters, integers and others, this depends of course from the specifier
+passed in the arguments, this is our version of the original printf function that works in C, the idea is that our
+function works like the original.
+In our case we used a switch(), in this way we can choose the specifier, that will take us to the respective function.
+
+Return: if everything is working ok, we are going to see the number of characters printed, except the null, remember
+that the null indicates us, the end of a string.
+
+.SH Compiling
+For compile we are going to use the next commands:
+
+$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
+
+$ gcc -Wall -Werror -Wextra -pedantic -g -Wno-format *.c (for gdb debbuging)
+
+Conversion specifiers
+
+%c - print a single character.
+
+%d - print a integer as a signed  (base 10) number - decimal.
+
+%i - print same as "d", integer in base 10.
+
+%s - print a string.
+
+% - print a percent sign (%).
+
+A conversion specifier begins with a percent sign and ends with the conversion characters shown below.
+
+.SH For example:
+
+_printf("Character: %c", character);
+
+_printf("String: %s", string);
+
+_printf("Integer: %d", integer); (or use "%i" for print integer, depends of the case).
+
+.SH  YOU CAN SEE ALSO
+https://www.youtube.com/watch?v=VXol2-SoUy8
+https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm.SH BUGS
+
+.SH BUGS
+If you find bugs, report to 2545@holbertonschool.com 2718@holbertonschool.com 2877@holbertonschool.com
+
+
+.SH AUTHOR
+Carlos Polania @timberdev, Luis E Pacheco @LEXUS72 y Oscar Angel @eloskyA.
