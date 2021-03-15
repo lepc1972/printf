@@ -39,67 +39,38 @@ int print_character(va_list arguments)
 	return (1);
 }
 
-int print_interger(va_list arguments)
+/**
+ * fun_integer - print integer and digit
+ * @arguments: va_list
+ * Return: int
+ */
+int fun_integer(va_list arguments)
 {
-	int i = 1;
-	int j;
-	int num = 0;
-	int power = 1;
-	int n = va_arg(arguments, int)
+	int i, d, length;
+	unsigned int x;
 
-	if (n == 0)
+	i  = va_arg(arguments, int);
+	d = 1;
+	length = 0;
+
+	if (i < 0)
 	{
-		_putchar ('0');
-		return;
+		length = length + _putchar('-');
+		x = i * -1;
 	}
-	if (n < 0)
+	else
 	{
-		n = n*-1;
-		_putchar('-');
+		x = i;
 	}
-	while(n > power)
+
+	while (x / d > 9)
+		d = d * 10;
+
+	while (d != 0)
 	{
-		power = power*10;
-		i++;
+		length = length + _putchar('0' + x / d);
+		x = x % d;
+		d = d / 10;
 	}
-	if (power == 1000000)
-	{
-		_putchar((n/100000) %10 + '0');
-		_putchar((n/10000) %10 + '0');
-		_putchar((n/1000) %10 + '0');
-		_putchar((n/100) %10 + '0');
-		_putchar((n/10) %10 + '0');
-		_putchar((n % 10) + '0');
-	}
-	if (power == 100000)
-	{
-		_putchar((n/10000) %10 + '0');
-		_putchar((n/1000) %10 + '0');
-		_putchar((n/100) %10 + '0');
-		_putchar((n/10) %10 + '0');
-		_putchar((n % 10) + '0');
-	}
-	if (power == 10000)
-	{
-		_putchar((n/1000) %10 + '0');
-		_putchar((n/100) %10 + '0');
-		_putchar((n/10) %10 + '0');
-		_putchar((n % 10) + '0');
-	}
-	if (power == 1000)
-	{
-		_putchar((n/100) %10 + '0');
-		_putchar((n/10) %10 + '0');
-		_putchar((n % 10) + '0');
-	}
-	if (power == 100)
-	{
-		_putchar((n/10) %10 + '0');
-		_putchar((n % 10) + '0');
-	}
-	if (power == 10)
-	{
-		_putchar((n % 10) + '0');
-	}
-	return (i);
+	return (length);
 }
