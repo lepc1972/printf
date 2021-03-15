@@ -13,7 +13,7 @@
 int _printf(const char *format, ...)
 {
 	va_list pa;
-	char *p;
+	const char *p;
 	int num = 0;
 
 	if (format == NULL)
