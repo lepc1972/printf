@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 /**
- * fun_string - print string
+ * print_string - print string
  * @arguments: va_list
  * Return: string
  */
@@ -26,7 +26,7 @@ int print_string(va_list arguments)
 }
 
 /**
- * fun_character - print character
+ * print_character - print character
  * @arguments: va_list
  * Return: character
  */
@@ -40,11 +40,11 @@ int print_character(va_list arguments)
 }
 
 /**
- * fun_integer - print integer and digit
+ * print_integer - print integer and digit
  * @arguments: va_list
  * Return: int
  */
-int fun_integer(va_list arguments)
+int print_integer(va_list arguments)
 {
 	int i, d, length;
 	unsigned int x;
