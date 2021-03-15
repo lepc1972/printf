@@ -19,7 +19,7 @@ int print_string(va_list arguments)
 	}
 	for (; *str; str++)
 	{
-		putchar(*str);
+		_putchar(*str);
 		i++;
 	}
 	return (i);
