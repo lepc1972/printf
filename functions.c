@@ -4,7 +4,7 @@
 
 
 
-int fun_string(va_list arguments)
+int print_string(va_list arguments)
 {
 	char *str;
 	int i;
@@ -22,7 +22,7 @@ int fun_string(va_list arguments)
 }
 
 
-int fun_character(va_list arguments)
+int print_character(va_list arguments)
 {
 	char str;
 	int i = 0;
