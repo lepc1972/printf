@@ -1,31 +1,41 @@
-#include "holberton.h"
+#include <stdio.h>
 #include <stdarg.h>
-#include <stddef.h>
+#include "holberton.h"
 
+/**
+ * fun_string - print string
+ * @arguments: va_list
+ * Return: string
+ */
 int print_string(va_list arguments)
 {
 	char *str;
-	int i;
+	int i = 0;
+
 	str = va_arg(arguments, char *);
 	if (str == NULL)
 	{
-		return NULL;
+		str = "(null)";
 	}
-       for (i = 0; str[i] != '\0';i++)
-       {
-	       _putchar(str[i]);
-       }
-       return (i);
-
+	for (; *str; str++)
+	{
+		putchar(*str);
+		i++;
+	}
+	return (i);
 }
 
-
+/**
+ * fun_character - print character
+ * @arguments: va_list
+ * Return: character
+ */
 int print_character(va_list arguments)
 {
-	char str;
-	int i = 0;
-	str = va_arg(arguments, char)
-		_putchar(str);
+	int x = 0;
+
+	x = va_arg(arguments, int);
+	_putchar(x);
 	return (1);
 }
 
