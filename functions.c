@@ -1,4 +1,5 @@
-
+#include "holberton.h"
+#include <stdarg.h>
 
 
 
@@ -30,13 +31,13 @@ int fun_character(va_list arguments)
 	return (1);
 }
 
-void print_interger(va_list arguments)
+int print_interger(va_list arguments)
 {
 	int i = 1;
 	int j;
 	int num = 0;
 	int power = 1;
-	int *n = va_arg(arguments, int)
+	int n = va_arg(arguments, int)
 
 	if (n == 0)
 	{
@@ -92,4 +93,5 @@ void print_interger(va_list arguments)
 	{
 		_putchar((n % 10) + '0');
 	}
+	return (i);
 }
