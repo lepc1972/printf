@@ -1,8 +1,6 @@
 #include "holberton.h"
 #include <stdarg.h>
-
-
-
+#include <stddef.h>
 
 int print_string(va_list arguments)
 {
@@ -52,7 +50,7 @@ int print_interger(va_list arguments)
 	while(n > power)
 	{
 		power = power*10;
-		i++; 
+		i++;
 	}
 	if (power == 1000000)
 	{
