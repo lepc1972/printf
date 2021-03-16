@@ -74,3 +74,35 @@ int print_integer(va_list arguments)
 	}
 	return (length);
 }
+/**
+ *fun_bin - dec to bin
+ *@arguments: va_list
+ *Return: Int
+ */
+int fun_bin(va_list arguments)
+{
+
+
+
+
+
+int n, i, j, a[100];
+n = va_arg(arguments, int);
+
+
+
+while (n > 0)
+{
+a[i] = n % 2;
+n = n / 2;
+++i;
+}
+
+for (j = i - 1; j >= 0; --j)
+printf("%d", a[j]);
+printf("\n");
+
+
+return (0);
+
+}
