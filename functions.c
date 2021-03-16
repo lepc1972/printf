@@ -86,9 +86,9 @@ int fun_bin(va_list arguments)
 
 
 
-int n, i, j, a[100];
-n = va_arg(arguments, int);
-
+int  i, j, a[100];
+unsigned int n = va_arg(arguments, unsigned int);
+i = 0;
 
 
 while (n > 0)
