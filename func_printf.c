@@ -83,13 +83,9 @@ return (length);
  */
 int fun_bin(va_list arguments)
 {
-
-
-
-
-
 int n, i, j, a[100];
 n = va_arg(arguments, int);
+i = 0;
 
 
 
@@ -106,6 +102,4 @@ printf("\n");
 
 
 return (0);
-
-
 }

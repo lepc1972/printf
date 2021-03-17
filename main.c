@@ -41,7 +41,7 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     _printf("hola holbies\n");
-    _printf("%b\n", 1200);
+    _printf("%b\n", 12345);
     
 
 
