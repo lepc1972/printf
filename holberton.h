@@ -1,16 +1,10 @@
 #ifndef PRINTF
 #define PRINTF
-
-/* */
-int print_integer(va_list pa);
-/* */
-int print_character(va_list pa);
-/* */
-int print_string(va_list pa);
-/* */
+#include <stdio.h>
 int _printf(const char *format, ...);
-/* */
 int _putchar(char c);
-
-#endif /*PRINTF*/
-
+int fun_string(va_list arguments);
+int fun_character(va_list arguments);
+int fun_integer(va_list arguments);
+int fun_bin(va_list arguments);
+#endif

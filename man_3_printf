@@ -1,61 +1,32 @@
-.\" Manpage for the _printf() project.
-.\"
-.TH man 1 "14-03-2021" "1.0" "_Printf Project man page"
+\" Manpage for _printf function
+.\" Contact Andrea Mendez or Andres Ballesteros to correct errors or typos.
+.TH man 8 "30 October 2019" "1.0" "_prtinf man page"
 .SH NAME
-._Printf
-\- With this function, we can produce an output according the given format.
+_printf -- formatted output
 .SH SYNOPSIS
-#include "holberton.h"
-
-int _printf(const char *format, ...)
-
-_printf[argument]...
-
+_printf [arguments ...]
 .SH DESCRIPTION
-With this function we can print strings, characters, integers and others, this depends of course from the specifier
-passed in the arguments, this is our version of the original printf function that works in C, the idea is that our
-function works like the original.
-In our case we used a switch(), in this way we can choose the specifier, that will take us to the respective function.
-
-Return: if everything is working ok, we are going to see the number of characters printed, except the null, remember
-that the null indicates us, the end of a string.
-
-.SH Compiling
-For compile we are going to use the next commands:
-
-$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
-
-$ gcc -Wall -Werror -Wextra -pedantic -g -Wno-format *.c (for gdb debbuging)
-
-Conversion specifiers
-
-%c - print a single character.
-
-%d - print a integer as a signed  (base 10) number - decimal.
-
-%i - print same as "d", integer in base 10.
-
-%s - print a string.
-
-% - print a percent sign (%).
-
-A conversion specifier begins with a percent sign and ends with the conversion characters shown below.
-
-.SH For example:
-
-_printf("Character: %c", character);
-
-_printf("String: %s", string);
-
-_printf("Integer: %d", integer); (or use "%i" for print integer, depends of the case).
-
-.SH  YOU CAN SEE ALSO
-https://www.youtube.com/watch?v=VXol2-SoUy8
-https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm.SH BUGS
-
+_printf function formats and prints its arguments, after the first, under control of the format.
+The prototype of _prinft works with a constant char pointer format which contains four types of objects: 
+strings, which are simply copied to standard output, character escape sequences which are copied to the standar output, digits and integer, which work with a
+loop to get the numbers and format specifications, each of which causes printing of the next successive argument.
+\n
+The format string is reused as often as necessary to satisfy the arguments. Any extra format specifications are evaluated with zero or the null string.
+.SH OPTIONS
+_printf validates each case to get the properly switch case as follow:
+\n
+s - get the string from the arguments
+\n
+c - get the character from the arguments
+\n
+i - get the integer from the arguments
+\n
+d - get the digits from the arguments
+\n
+default - get the other arguments of the input
+.SH SEE ALSO
+_PRINTF(1)
 .SH BUGS
-If you find bugs, report to 2545@holbertonschool.com 2718@holbertonschool.com 2877@holbertonschool.com
-
-
+There is a bug when _printf tried to print special character like '%'. 
 .SH AUTHOR
-Carlos Polania @timberdev, Luis E Pacheco @LEXUS72 y Oscar Angel @eloskyA.
+Andrea Mendez Mesias (1159@holbertonschool.com) and Andres Felipe Ballesteros (1194@holbertonschool.com)

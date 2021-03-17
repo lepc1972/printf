@@ -1,162 +1,25 @@
-# Printf(), Project 
-
-:smile: :smile:
-
-
-
-### What does it consist of?
- 
- This project is about to create our own printf() function, that should works like the original printf() function that we use in C, sounds a little difficult, but with the appropriate tools, we can do it.
- 
- ![print all...](/home/lepc72/Descargas/Printf.svg.png  "print()")
- 
- :point_down:
- ---
- 
-                    
-                    
-                    Authorized functions and macros
-
-    write (man 2 write)
-    malloc (man 3 malloc)
-    free (man 3 free)
-    va_start (man 3 va_start)
-    va_end (man 3 va_end)
-    va_copy (man 3 va_copy)
-    va_arg (man 3 va_arg)
-
+# 0x11. C - printf
 ---
 
-Above some authorized functions and macros to build our function()
+# General Objective
+- learn how it works printf function and develop our own function printf
 
-
-## Some recomendations before compilation  our printf():
-
-- As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions).
-
-- Our main files will include your main header file (holberton.h): #include holberton.h
-
-- You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf.
-
-
-###Now here we can see the main.c file that we used, and that you can use for test the function
-
-
-~~~
-
-#include <limits.h>
-#include <stdio.h>
-#include "holberton.h"
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-    int len;
-    int len2;
-    unsigned int ui;
-    void *addr;
-
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
-    _printf("Length:[%d, %i]\n", len, len);
-    printf("Length:[%d, %i]\n", len2, len2);
-    _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
-    _printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
-    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
-    len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
-    _printf("Len:[%d]\n", len);
-    printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
-    return (0);
-}
-
-
-
-
-~~~
-
-##Now what?  
-
-:computer:
-
-Easy, we should see this output... :bow:
-
-~~~
-
-Let's try to printf a simple sentence.
-Let's try to printf a simple sentence.
-Length:[39, 39]
-Length:[39, 39]
-Negative:[-762534]
-Negative:[-762534]
-Unsigned:[2147484671]
-Unsigned:[2147484671]
-Unsigned octal:[20000001777]
-Unsigned octal:[20000001777]
-Unsigned hexadecimal:[800003ff, 800003FF]
-Unsigned hexadecimal:[800003ff, 800003FF]
-Character:[H]
-Character:[H]
-String:[I am a string !]
-String:[I am a string !]
-Address:[0x7ffe637541f0]
-Address:[0x7ffe637541f0]
-Percent:[%]
-Percent:[%]
-Len:[12]
-Len:[12]
-Unknown:[%r]
-Unknown:[%r]
-
-
-
-
-
-~~~
-
-As you can see, dont seem difficult, but have a lot of work behind the code, try to do your own printf() function.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-                              
- 
- 
- 
- 
- 
- 
-
+---
+# Tasks
+- 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life 
+- 1. Education is when you read the fine print. Experience is what you get if you don't 
+- 2. Just because it's in print doesn't mean it's the gospel
+- 3. With a face like mine, I do better in print
+- 4. What one has not experienced, one will never understand in print
+- 5. Nothing in fine print is ever good news
+- 6. My weakness is wearing too much leopard print
+- 7. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
+- 8. The big print gives and the small print takes away
+- 9. Sarcasm is lost in print 
+- 10. Print some money and give it to us for the rain forests
+- 11. The negative is the equivalent of the composer's score, and the print the performance
+- 12. It's depressing when you're still around and your albums are out of print 
+- 13. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
+- 14. Print is the sharpest and the strongest weapon of our party
+- 15. The flood of print has turned reading into a process of gulping rather than savoring
+- 16. *
