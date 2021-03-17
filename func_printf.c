@@ -101,5 +101,5 @@ printf("%d", a[j]);
 printf("\n");
 
 
-return (0);
+return (n);
 }
