@@ -135,6 +135,8 @@ Unknown:[%r]
 
 As you can see, dont seem difficult, but have a lot of work behind the code, try to do your own printf() function.
 
+:computer:
+
 
 
 
