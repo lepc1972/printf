@@ -30,7 +30,7 @@
 Above some authorized functions and macros to build our function()
 
 
-## Some recomendations to do  before compilation  our printf():
+## Some recomendations before compilation  our printf():
 
 - As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions).
 
